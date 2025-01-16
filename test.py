@@ -33,6 +33,10 @@ def test_add_negative_numbers():
     with pytest.raises(ValueError, match="negative numbers not allowed -1, -2"): 
         add("-1,-2,3") 
 
+# This is test string if is number is empty and ignores it.     
+def test_add_ignore_empty_numbers(): 
+    assert add("1,,2") == 3
+
 test_add_empty_string()
 test_add_single_number()
 test_add_two_numbers()
@@ -40,3 +44,4 @@ test_add_multiple_numbers()
 test_add_with_newlines()
 test_add_with_custom_delimiter()
 test_add_negative_numbers()
+test_add_ignore_empty_numbers()
