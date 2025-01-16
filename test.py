@@ -17,7 +17,12 @@ def test_add_two_numbers():
 def test_add_multiple_numbers(): 
     assert add("1,2,3,4") == 10 
 
+# This is test string "1\n2,3" 1 + 2 + 3 = 6
+def test_add_with_newlines(): 
+    assert add("1\n2,3") == 6 
+
 test_add_empty_string()
 test_add_single_number()
 test_add_two_numbers()
 test_add_multiple_numbers()
+test_add_with_newlines()
